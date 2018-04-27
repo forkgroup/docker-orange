@@ -5,6 +5,7 @@ MAINTAINER Syhily, syhily@gmail.com
 ENV ORANGE_PATH="/usr/local/orange"
 ARG LOR_VERSION="0.3.2"
 ENV ORANGE_VERSION="0.6.4"
+ENV THE_FIRST_BUILD=true
 
 ADD docker-entrypoint.sh docker-entrypoint.sh
 

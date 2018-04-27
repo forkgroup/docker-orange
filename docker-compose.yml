@@ -10,6 +10,8 @@ db:
   # Port is not required to be exposed, but recommend for debug purpose
   ports:
     - "3307:3306"
+  volumes:
+    - "/Users/limx/runtime/mysql:/var/lib/mysql"
 
 orange:
   build: .
