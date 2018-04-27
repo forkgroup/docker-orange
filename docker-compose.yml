@@ -9,7 +9,7 @@ db:
     - MYSQL_RANDOM_ROOT_PASSWORD=true
   # Port is not required to be exposed, but recommend for debug purpose
   ports:
-    - "3306:3306"
+    - "3307:3306"
 
 orange:
   build: .
@@ -20,10 +20,10 @@ orange:
     - "8888:80"
     - "9999:9999"
   environment:
-    - ORANGE_HOST=db
+    - ORANGE_HOST=db_url
     - ORANGE_PORT=3306
     - ORANGE_USER=orange
     - ORANGE_PWD=12345678
     - ORANGE_DATABASE=orange
   links:
-    - db
+    - db:db_url
