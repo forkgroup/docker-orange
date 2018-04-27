@@ -1,6 +1,7 @@
 #!/bin/bash
 ORANGE_CONF="/usr/local/orange/conf/orange.conf"
 NGINX_CONF="/usr/local/orange/conf/nginx.conf"
+THE_FIRST_BUILD=true
 
 # DNS resolve for nginx and add the internal DNS
 INTERNAL_DNS=$(cat /etc/resolv.conf | grep nameserver)
