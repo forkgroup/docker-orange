@@ -19,7 +19,7 @@ orange:
   # image: syhily/orange
   ports:
     - "7777:7777"
-    - "8888:80"
+    - "8888:8888"
     - "9999:9999"
   environment:
     - ORANGE_HOST=db_host
@@ -27,5 +27,8 @@ orange:
     - ORANGE_USER=orange
     - ORANGE_PWD=12345678
     - ORANGE_DATABASE=orange
+    - ORANGE_FIRST_BUILD=false
+  volumes:
+    - "/Users/limx/runtime/orange:/orange"
   links:
     - db:db_host

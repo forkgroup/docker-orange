@@ -59,9 +59,10 @@ RUN \
     && echo "www:www" | chpasswd \
     && echo "www   ALL=(ALL)       ALL" >> /etc/sudoers \
     && mkdir -p ${ORANGE_PATH}/logs \
+    && mkdir -p /orange/conf.d \
     && chown -R www:www ${ORANGE_PATH}/*
 
-EXPOSE 7777 80 9999
+EXPOSE 7777 8888 9999
 
 # Daemon
 ENTRYPOINT ["docker-entrypoint.sh"]
