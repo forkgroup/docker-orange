@@ -20,10 +20,10 @@ orange:
     - "8888:80"
     - "9999:9999"
   environment:
-    - ORANGE_HOST=db_url
+    - ORANGE_HOST=db_host
     - ORANGE_PORT=3306
     - ORANGE_USER=orange
     - ORANGE_PWD=12345678
     - ORANGE_DATABASE=orange
   links:
-    - db:db_url
+    - db:db_host
