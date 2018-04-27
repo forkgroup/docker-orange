@@ -48,8 +48,6 @@ if [ $? -ne 0 ];then
     ORANGE_DATABASE_IP=`getent hosts ${ORANGE_HOST} | awk '{ print $1 }'`
     if ${ORANGE_FIRST_BUILD}; then
         orange store -t=mysql -d=${ORANGE_DATABASE} -hh=${ORANGE_DATABASE_IP} -pp=${ORANGE_PORT} -p=${ORANGE_PWD} -u=${ORANGE_USER} -o=init -f=/usr/local/orange/install/orange-v${ORANGE_VERSION}.sql
-        else
-        orange store -t=mysql -d=${ORANGE_DATABASE} -hh=${ORANGE_DATABASE_IP} -pp=${ORANGE_PORT} -p=${ORANGE_PWD} -u=${ORANGE_USER} -o=init
     fi
 fi
 sed -i "s/resolver 114.114.114.114;/resolver 127.0.0.1 ipv6=off;\ninclude \/orange\/conf.d\/*;/g" ${NGINX_CONF}

@@ -27,7 +27,7 @@ orange:
     - ORANGE_USER=orange
     - ORANGE_PWD=12345678
     - ORANGE_DATABASE=orange
-    - ORANGE_FIRST_BUILD=false
+    - ORANGE_FIRST_BUILD=true
   volumes:
     - "/Users/limx/runtime/orange:/orange"
   links:
